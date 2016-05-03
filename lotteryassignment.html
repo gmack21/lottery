@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title></title>
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
+
+</head>
+
+<body>
+<div class ="container">
+    <div class = "col-lg-4 col-lg-offset-4">
+        <h2>How many days will it take me to win the lottery if I buy <input type="text" id="userInput"/> tickets a day?</h2>
+        <button onclick="lotteryWinner()" class="btn btn-success">Check</button>
+        <div id = "display"></div>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+<script>
+//declare variables then move into function
+ 
+    
+    
+//this is a function that takes in a parameter X and returns a value that is length of time in days it would take based on X to win the lottery. 1 in 292,201,338     
+    
+    function lotteryWinner(){
+      var numberOfTickets = document.getElementById('userInput');
+        var tickets = numberOfTickets.value;
+        console.log(tickets);
+        var probability = 292201338;
+        
+        var days = probability / tickets ;
+        var fullDays = Math.ceil(days);
+        document.getElementById('display').innerHTML = fullDays += ' days';
+        
+    }
+    </script>
+</body>
+</html>
